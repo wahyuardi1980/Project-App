@@ -16,17 +16,17 @@
 {{-- navbar --}}
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
-    <a class="navbar-brand" href="#"><img src="img/logo-icon/cctv_b2b.png" alt="" width="45" height="45" class="d-inline-block align-text-top"></a>
+    <a class="navbar-brand" href="{{ url('/')}}"><img src="img/logo-icon/cctv_b2b.png" alt="" width="45" height="45" class="d-inline-block align-text-top"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa-solid fa-house"></i> Home</a>
+          <a class="nav-link" href="{{ url('/')}}"><i class="fa-solid fa-house"></i> Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa-solid fa-box-open"></i> Product</a>
+          <a class="nav-link" href="{{ url('/product')}}"><i class="fa-solid fa-box-open"></i> Product</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><i class="fa-solid fa-address-book"></i> Contact Us</a>
@@ -39,10 +39,11 @@
   </div>
 </nav>
 
-{{-- Jumbotron --}}
 
+
+{{-- Jumbotron --}}
 <section id="cari">
-    <form class="d-flex cari">
+    <form class="d-flex">
           <input  class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
@@ -75,22 +76,24 @@
 </section>
 
 <section id="jumbotron">
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <div class="row">
-        <div class="col-lg">
-          <h4>Halo, Selamat Datang...</h4>
-          <h1>Temukan sistem keamanan <br> terbaik menggunakan cctv</h1>
-          <p>Silahkan lihat product <br> yang kami tawarkan dibawah ini</p>
-        </div>
-        <div class="col-lg">
-          <img src="img/kamera.png" alt="vector 3d kamera" class="img-fluid img">
-        </div>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+          <div class="col-lg">
+            <h4>Halo, Selamat Datang...</h4>
+            <h1>Temukan sistem keamanan <br> terbaik menggunakan cctv</h1>
+            <p>Silahkan lihat product <br> yang kami tawarkan dibawah ini</p>
+              <button class="btn btn-primary tombol">Lihat Product</button>
+          </div>
+          <div class="col-lg">
+            <img src="img/kamera.png" alt="vector 3d kamera" class="img-fluid img">
+          </div>
+      </div>
     </div>
   </div>
-</div>
 </section>
 
+{{-- mobile ui only --}}
 <section id="slide-interval">
   <div class="bungkus">
     <div id="carouselExampleDark" class="carousel carousel-dark slide img-slide" data-bs-ride="carousel">
@@ -116,12 +119,9 @@
           </div>
         </div>
       </div>
-    </div>
-
-
+  </div>
   <hr>
-
-    <div class="bungkus-merk">
+  <div class="bungkus-merk">
       <div id="carouselExampleDark" class="carousel carousel-dark slide img-slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
@@ -166,20 +166,90 @@
           </div>
         </div>
       </div>
+      <button class="btn btn-primary tombol"><i class="fa-solid fa-list"></i> All Category</button>
+</div>
+</section>
+
+
+<div class="bungkus-waves">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,245.3C384,267,480,277,576,240C672,203,768,117,864,106.7C960,96,1056,160,1152,181.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 </div>
 
 
+<section id="intro">
+  <div class="container">
+    <div class="intro-display">
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="img/rog.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="img/bg.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e3dddd" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,245.3C384,267,480,277,576,240C672,203,768,117,864,106.7C960,96,1056,160,1152,181.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 </section>
 
-{{-- <section id="merk">
 
-</section> --}}
 
-<section>
-  <div class="product">
-    <div class="container">
-      <button class="btn btn-primary tombol">Lihat Product</button>
+<section id="list-product-sec">
+  <div class="container">
+    <div class="list-product">
+      <div class="row">
+        <div class="col-lg">
+          <h1>Product <span>Popular</span></h1>
+        </div>
+        <div class="col-lg">
+          <button class="btn btn-primary tombol"><i class="fa-solid fa-list"></i> All Category</button>
+        </div>
+      </div>
     </div>
+
+      <div class="row list-product-card">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/brand-populer/p1.jpg" class="card-img-top" alt="foto 1">
+              <div class="card-body">
+                <p class="card-text">4 Camera 2 Megapixels</p>
+                <button class="btn btn-primary tombol">Lihat</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/brand-populer/p1.jpg" class="card-img-top" alt="foto 1">
+              <div class="card-body">
+                <p class="card-text">4 Camera 2 Megapixels</p>
+                <button class="btn btn-primary tombol">Lihat</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/brand-populer/p1.jpg" class="card-img-top" alt="foto 1">
+              <div class="card-body">
+                <p class="card-text">4 Camera 2 Megapixels</p>
+                <button class="btn btn-primary tombol">Lihat</button>
+              </div>
+            </div>
+          </div>
+      </div>
   </div>
 </section>
 
