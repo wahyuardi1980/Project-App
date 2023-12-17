@@ -1,10 +1,11 @@
-    $(function(){
-      var navbar = $('.header-inner');
-      $(window).scroll(function(){
-        if($(window).scrollTop() <=40){
-          navbar.removeClass('navbar-scroll');
-        }else{
-          navbar.addClass('navbar-scroll');
-        }
-      });
-    });
+var nav = document.querySelector("nav");
+var gettoTop = document.getElementById("tombol-atas");
+
+// function navbar sticky-top
+window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 20) {
+        nav.classList.add("sticky");
+    } else {
+        nav.classList.remove("sticky");
+    }
+});

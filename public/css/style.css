@@ -1,41 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Poppins:ital,wght@0,300;1,300&family=Roboto+Condensed&family=Signika+Negative:wght@600&display=swap');
-
-    body{
-        background-image: linear-gradient(to bottom left, rgba(15, 97, 157, 1), rgb(232, 236, 240));
-    }
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Poppins:ital,wght@0,300;1,300&family=Roboto+Condensed&family=Signika+Negative:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto+Condensed:wght@700&family=Viga&display=swap");
+body {
+    background-image: linear-gradient(
+        to bottom right,
+        /* rgba(15, 97, 157, 1), */ rgb(28, 121, 188),
+        rgb(232, 236, 240)
+    );
+    /* background-color: rgb(28, 121, 188); */
+}
 
 /* Mobile Version */
 @media (max-width: 576px) {
+    nav.sticky {
+        opacity: 0.8;
+        box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+        background-image: linear-gradient(
+            to bottom left,
+            rgba(15, 97, 157, 1),
+            rgb(154, 177, 199)
+        );
+    }
     .nav-link {
-        font-family: 'Signika Negative';
+        font-family: "Signika Negative";
         font-weight: 600;
     }
 
-    .nav-brand, .nav-link {
+    .nav-brand,
+    .nav-link {
         color: white !important;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
     }
-    .img, .jumbotron {
+    .img,
+    .jumbotron {
         display: none;
     }
 
-    .product, .tombol {
+    .product,
+    .tombol {
         margin-top: 10px;
         margin-bottom: 10px;
-        font-family: 'Poppins';
+        font-family: "Poppins";
         border-radius: 8px;
     }
     .product .tombol:hover {
         transition: 0.3 ease-in-out;
-        background-color:  #0492F9;;
+        background-color: #0492f9;
     }
 
-    #cari, button {
+    #cari,
+    button {
         padding: 15px;
     }
-    
+
     .img-slide {
         margin-top: -20px;
+    }
+
+    /* carousel gambar dan indikator css */
+    .carousel-inner img {
+        width: 200px;
+        height: 200px;
+        border-radius: 40px;
+    }
+    .carousel-indicators button {
+        margin-bottom: -150%;
+        background-color: red !important;
+    }
+
+    .carousel-inner .gambar {
+        width: 100px;
+        height: 100px;
     }
 
     .bungkus {
@@ -47,41 +81,91 @@
         margin-top: 20px;
         padding: 50px;
     }
-    .panel p {
-        font-family: 'Poppins';
-        margin-top: 10px;
-        font-size: 12px;
+
+    .icons {
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-bottom: 30px;
         text-align: center;
+        display: inline-block;
     }
 
-    .panel button {
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.27);
-        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.27);
-        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.27);
-        margin-top: 50px;
-        margin-bottom: 50px;
+    .icons a {
+        box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+        transition: 0.5s ease;
+        margin: 10px 0;
+        background-color: white;
+        width: 60px;
+        height: 60px;
+        position: relative;
+        display: block;
+        font-size: 30px;
+        line-height: 60px;
+        border-radius: 50%;
+        color: black;
     }
 
-    .panel button:hover{
-        transition: 0.3 ease-in-out;
-        background-color: #0492F9;
+    .icons span {
+        box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+        visibility: hidden;
+        width: 120px;
+        background-color: #fff;
+        color: #14b8a6;
+        text-align: center;
+        border-radius: 18px;
+        /* padding: 5px 0; */
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: small;
+        font-weight: 600;
+        margin-bottom: -15px;
+    }
+
+    .icons span::before {
+        position: absolute;
+        content: "";
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #fff;
+        bottom: -5px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .icons:hover span {
+        transform: translateY(-10px);
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0.2s;
     }
 
     .bungkus-product {
         margin-top: -35px !important;
         padding-top: 100px;
-        padding: 50px;  
+        padding: 50px;
         background-color: rgb(227, 221, 221);
     }
 
-    .bungkus-product h1{
-        font-family: 'Poppins';
+    .icons a:hover {
+        background-color: #14b8a6;
+        color: white;
+        transform: translate(0, -25px);
+        box-shadow: 0 20px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .bungkus-product h1 {
+        font-family: "Poppins";
         font-weight: 800;
         margin-bottom: 35px;
         text-align: center;
     }
 
-    .bungkus-product, .tombol {
+    .bungkus-product,
+    .tombol {
         text-align: center;
         margin-top: 10px;
     }
@@ -89,7 +173,7 @@
     .bungkus-waves {
         margin-top: -75px;
     }
-    
+
     #list-product-sec {
         margin-top: -10px;
         background-color: #f3f4f5;
@@ -106,8 +190,10 @@
     .list-product .tombol {
         display: none;
     }
+    #intro {
+        display: none;
+    }
 }
-
 
 /* Dekstop Version */
 @media (min-width: 992px) {
@@ -123,55 +209,129 @@
         display: none;
     }
 
+    #jumbotron {
+        padding-bottom: 15%;
+    }
+
+    .carousel-indicators button {
+        margin-top: 100%;
+        background-color: red !important;
+    }
+
+    nav.sticky {
+        opacity: 0.8;
+        box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+        background-image: linear-gradient(
+            to bottom right,
+            rgba(28, 121, 188, 1),
+            rgb(154, 177, 199)
+        );
+        backdrop-filter: blur(5px);
+    }
+
     .nav-link {
         margin-right: 30px;
         text-transform: uppercase;
-        font-family: 'Signika Negative';
-        font-weight: 600;
-    }
-
-    .nav-link:hover {
-        background-color: #0492F9;
+        font-family: "Signika Negative";
+        font-weight: 400;
         border-radius: 8px;
     }
 
-    .nav-brand, .nav-link {
+    .nav-link:hover {
+        background-color: #0d6efd !important ;
+        border-radius: 8px;
+    }
+
+    .nav-brand,
+    .nav-link {
         color: white !important;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7); */
     }
 
     .jumbotron h4 {
-        font-family: 'Roboto Condensed';
+        font-family: "Poppins";
         font-size: 24px;
         margin-top: 30%;
-        font-weight: 200;
-        color: black;
+        font-weight: 600;
+        color: white;
     }
+
+    .jumbotron h4 span {
+        font-family: "Poppins";
+        font-size: 24px;
+        margin-top: 30%;
+        font-weight: 400;
+        color: white;
+    }
+
     .jumbotron h1 {
-        font-family: 'Poppins';
+        font-family: "Poppins";
         font-size: 36px;
         margin-top: 30px;
-        font-weight: bold;
-        color: black;
+        font-weight: 700;
+        color: white;
     }
 
     .jumbotron p {
-        font-family: 'Roboto Condensed';
+        font-family: "Poppins";
         margin-top: 3%;
         font-size: 24px;
-        font-weight: 200;
-        color: black;
+        font-weight: 600;
+        color: #ffff;
     }
 
-    .jumbotron, .img {
+    .gambar-card {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        display: flex;
+    }
+
+    .gambar-card i {
+        box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+        transition: 0.5s ease;
+        margin: 0 120px;
+        background-color: #0f172a;
+        width: 60px;
+        height: 60px;
+        position: relative;
+        display: block;
+        font-size: 30px;
+        line-height: 60px;
+        border-radius: 50%;
+        color: white;
+    }
+
+    .j-title {
+        text-align: center;
+        font-family: "Poppins";
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .l-text {
+        text-align: center;
+        margin-top: 15px;
+        color: #64748b;
+    }
+    .t-card {
+        margin: 0 60px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .jumbotron,
+    .img {
         margin-top: 15px;
     }
 
-    .jumbotron, .tombol {
-        font-family: 'Poppins';
+    .jumbotron,
+    .tombol {
+        font-family: "Poppins";
     }
 
-    .product, button {
+    .product,
+    button {
         padding-bottom: 100%;
     }
 
@@ -180,30 +340,46 @@
         align-items: center;
         margin-top: 10px;
         margin-bottom: 10px;
-        font-family: 'Poppins';
+        font-family: "Poppins";
         border-radius: 8px;
     }
 
-    .product, .tombol:hover{
+    .product,
+    .tombol:hover {
         transition: 0.3 ease-in-out;
-        background-color: #0492F9;
+        /* background-color: #0492f9; */
+        opacity: 0.7;
     }
     #intro {
         margin-top: -10px;
-        background-color: #f3f4f5;
+        background-color: #ffffff;
+    }
+    .kartu {
+        margin-top: -50%;
+        margin-bottom: 100px;
+        border-radius: 12px;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+        transition: 0.5s ease;
     }
 
+    .kartu:hover {
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.7);
+        transform: translate(0, -25px);
+    }
 
     #list-product-sec {
-        background-color: rgb(227, 221, 221);
+        background-color: #ffffff;
+        margin-top: -20px;
+        padding-top: 5%;
     }
 
     .intro-display {
         padding: 50px;
     }
 
-    .list-product, h1{
-        font-family: 'Kanit';
+    .list-product,
+    h1 {
+        font-family: "Kanit";
         font-size: 45px;
         font-weight: bold;
         padding-bottom: 20px;
@@ -214,14 +390,8 @@
         color: rgb(44, 205, 44);
     }
 
-    .list-product, .tombol {
+    .list-product,
+    .tombol {
         text-align: right;
     }
 }
-
-
-/* .banner-image {
-    background: rgba(0,0,0,0.6) url('../img/bg.png');
-    background-size: cover;
-    background-blend-mode: darken;
-} */
