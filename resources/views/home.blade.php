@@ -31,14 +31,14 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#jumbotron"><i class="fa-solid fa-house"></i> Home</a>
+                        <a class="nav-link" href="#jumbotron"><i class="fa-solid fa-house"></i> Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/product') }}"><i class="fa-solid fa-box-open"></i>
+                        <a class="nav-link" href="#list-product-sec"><i class="fa-solid fa-box-open"></i>
                             Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-address-book"></i> Contact Us</a>
+                        <a class="nav-link" href="#contact"><i class="fa-solid fa-address-book"></i> Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-primary tombol" href="#"><i class="fa-solid fa-user"></i> Sign In</a>
@@ -48,7 +48,10 @@
         </div>
     </nav>
 
-
+    <!-- tombol to top -->
+    <div class="to-top" id="tombol-atas" data-aos="fade-left">
+        <a><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
 
     {{-- Jumbotron --}}
     {{-- display in mobile only  --}}
@@ -318,6 +321,7 @@
         <div class="container">
             <hr>
             <h1 class="j-keunggulan">Keunggulan CCTV Lab</h1>
+            <p class="p-keunggulan">Alasan mengapa harus membeli produk cctv di tempat kami</p>
             <div class="row">
                 <div class="col-6">
                     <div class="card keunggulan-kartu">
@@ -328,11 +332,12 @@
                             <div class="col-lg">
                                 <div class="card-body">
                                     <h5 class="card-title">Berpengalaman</h5>
-                                    <p class="card-text">Memiliki pengalaman lebih dari 20 tahun di bidang cctv, sejak tahun 2000.</p>
+                                    <p class="card-text">Memiliki pengalaman lebih dari 20 tahun di bidang cctv, sejak
+                                        tahun 2000.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>                  
+                    </div>
                 </div>
                 <div class="col-6">
                     <div class="card keunggulan-kartu">
@@ -373,7 +378,8 @@
                             <div class="col-lg">
                                 <div class="card-body">
                                     <h5 class="card-title">Konsultasi</h5>
-                                    <p class="card-text">Kami memberikan bantuan dan konsultasi agar produk sesuai kebutuhan.</p>
+                                    <p class="card-text">Kami memberikan bantuan dan konsultasi agar produk sesuai
+                                        kebutuhan.</p>
                                 </div>
                             </div>
                         </div>
@@ -383,6 +389,107 @@
         </div>
     </section>
 
+    <!-- main contact us -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h3 class="j-contact">Contact</h3>
+                    <h1 class="j-hub">Hubungi Saya</h1>
+                    <p class="label-contact">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Blanditiis, sed.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-md-6">
+                    <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                        <strong>Thank You!</strong> Pesan anda sudah kami terima.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                            aria-label="Close"></button>
+                    </div>
+                    <form name="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="name"
+                                name="nama" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="email"
+                                name="email" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="pesan" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+                        </div>
+
+                        <div class="col-lg">
+                            <div class="d-grid gap-2">
+                                <button type="button" class="btn btn-success btn-rwt">
+                                    Kirim
+                                </button>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row bawah">
+                <div class="col-lg info">
+                    <h3>INFOR<span>MASI</span></h3>
+                    <br />
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Product</a></li>
+                        <li><a href="#new-project">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg priv">
+                    <h3>PRIVACY <span>POLICY</span></h3>
+                    <br />
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Term Of Use</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg alamat">
+                    <h3>ALA<span>MAT</span></h3>
+                    <br />
+                    <p>
+                        Jl. Pelita 3 No. 29A <br />Kec. Medan Perjuangan <br /><br /><span>Telp. 0813 6242 1560</span>
+                        <br /><br />Email. cctvlabmedan@gmail.com
+                    </p>
+                </div>
+                <div class="col-lg maps">
+                    <h3>MA<span>PS</span></h3>
+                    <br />
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d351.9549571435304!2d98.68484608276981!3d3.6067485686608323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131931699e5a1%3A0x45fdc5e6f4cbd3b!2sJl.%20Pelita%20III%2C%20Kota%20Medan%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1701889016261!5m2!1sid!2sid"
+                        width="300" height="300" style="border: 0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <hr class="garis2" />
+        <div class="container">
+            <p class="footer-bottom">
+                &copy; 2024 Website All Created By 💕 Wahyu Ardiansyah
+            </p>
+        </div>
+    </footer>
+
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -390,4 +497,3 @@
 </body>
 
 </html>
-
