@@ -193,6 +193,44 @@ body {
     #intro {
         display: none;
     }
+    /* keunggulan kami */
+    #keunggulan-kami {
+        background-color: #ffffff;
+        margin-top: -20px;
+        padding-top: 5%;
+    }
+
+    .keunggulan-kartu {
+        border-radius: 15px;
+        margin-bottom: 35px;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+        transition: 0.5s ease;
+    }
+
+    .keunggulan-kartu .card-title {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: 700;
+        font-family: "Poppins";
+    }
+
+    .keunggulan-kartu .card-text {
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: "Poppins";
+    }
+
+    .gambar-keunggulan i {
+        color: #0a58ca;
+        padding: 15% 0;
+        margin-left: 50px;
+        font-size: 100px;
+    }
+    .keunggulan-kartu:hover {
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.7);
+        /* transform: translate(0, -25px); */
+    }
 }
 
 /* Dekstop Version */
@@ -393,5 +431,44 @@ body {
     .list-product,
     .tombol {
         text-align: right;
+    }
+
+    /* keunggulan kami */
+    #keunggulan-kami {
+        background-color: #ffffff;
+        margin-top: -20px;
+        padding-top: 5%;
+    }
+
+    .keunggulan-kartu {
+        border-radius: 15px;
+        margin-bottom: 35px;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+        transition: 0.5s ease;
+    }
+
+    .keunggulan-kartu .card-title {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: 700;
+        font-family: "Poppins";
+    }
+
+    .keunggulan-kartu .card-text {
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: "Poppins";
+    }
+
+    .gambar-keunggulan i {
+        color: #0a58ca;
+        padding: 15% 0;
+        margin-left: 50px;
+        font-size: 100px;
+    }
+    .keunggulan-kartu:hover {
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.7);
+        /* transform: translate(0, -25px); */
     }
 }

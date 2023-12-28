@@ -90,17 +90,18 @@
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
                         aria-label="Slide 3"></button>
                 </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/banner/Banner-Ecommerce-Platinum-shopee.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/banner/Platinum-Logo-Rebranding.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/banner/Powered-by-Antzman.png" class="d-block w-100" alt="...">
-                        </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/banner/Banner-Ecommerce-Platinum-shopee.png" class="d-block w-100"
+                            alt="...">
                     </div>
+                    <div class="carousel-item">
+                        <img src="img/banner/Platinum-Logo-Rebranding.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/banner/Powered-by-Antzman.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
             </div>
 
             <hr>
@@ -162,7 +163,6 @@
                     <div class="col-lg">
                         <h4><span>Hello,</span> Selamat Datang...</h4>
                         <h1>Temukan sistem keamanan <br> terbaik menggunakan cctv</h1>
-                        <p>Silahkan lihat product <br> yang kami tawarkan dibawah ini</p>
                         <button class="btn btn-primary tombol">Lihat Product</button>
                     </div>
                     <div class="col-lg">
@@ -239,7 +239,8 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/banner/Banner-Ecommerce-Platinum-shopee.png" class="d-block w-100" alt="...">
+                            <img src="img/banner/Banner-Ecommerce-Platinum-shopee.png" class="d-block w-100"
+                                alt="...">
                         </div>
                         <div class="carousel-item">
                             <img src="img/banner/Platinum-Logo-Rebranding.png" class="d-block w-100" alt="...">
@@ -264,7 +265,19 @@
                         <h1>Product <span>Popular</span></h1>
                     </div>
                     <div class="col-lg">
-                        <button class="btn btn-primary tombol"><i class="fa-solid fa-list"></i> All Category</button>
+                        {{-- <button class="btn btn-primary tombol"><i class="fa-solid fa-list"></i> All Category</button> --}}
+                        <div class="dropdown">
+                            <a class="btn btn-primary tombol dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-list"></i> All Category
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -301,6 +314,75 @@
         </div>
     </section>
 
+    <section id="keunggulan-kami">
+        <div class="container">
+            <hr>
+            <h1 class="j-keunggulan">Keunggulan CCTV Lab</h1>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card keunggulan-kartu">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="gambar-keunggulan"> <i class="fa-solid fa-rocket"></i></div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Berpengalaman</h5>
+                                    <p class="card-text">Memiliki pengalaman lebih dari 20 tahun di bidang cctv, sejak tahun 2000.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+                <div class="col-6">
+                    <div class="card keunggulan-kartu">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="gambar-keunggulan"> <i class="fa-solid fa-thumbs-up"></i></div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Terlengkap</h5>
+                                    <p class="card-text">Produk terlengkap yang bisa dipilih sesuai kebutuhan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card keunggulan-kartu">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="gambar-keunggulan"> <i class="fa-solid fa-boxes-stacked"></i></div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Paket CCTV</h5>
+                                    <p class="card-text">Tersedia pilihan paket produk dengan harga terbaik.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card keunggulan-kartu">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="gambar-keunggulan"> <i class="fa-solid fa-headset"></i></div>
+                            </div>
+                            <div class="col-lg">
+                                <div class="card-body">
+                                    <h5 class="card-title">Konsultasi</h5>
+                                    <p class="card-text">Kami memberikan bantuan dan konsultasi agar produk sesuai kebutuhan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -308,3 +390,4 @@
 </body>
 
 </html>
+
