@@ -75,9 +75,9 @@
             <div class="icons">
                 <a href="#"> <span>Prosess Pembayaran</span><i class="fa-solid fa-credit-card"></i></a>
             </div>
-            <div class="icons">
+            {{-- <div class="icons">
                 <a href="#"> <span>Jadi Distributor</span><i class="fa-solid fa-person-circle-check"></i></a>
-            </div>
+            </div> --}}
         </div>
     </section>
 
@@ -181,47 +181,36 @@
         {{-- card --}}
         <div class="container">
             <div class="row">
-                <div class="col-lg">
-                    <div class="card kartu">
-                        <div class="gambar-card"><i class="fa-solid fa-calendar-days"></i></div>
-                        <div class="card-body">
-                            <h5 class="j-title">Jadwal Pemasagan</h5>
-                            <p class="l-text">Tentukan waktu pemasangan CCTV sesuai dengan keinginan anda</p>
-                            <hr>
-                            <a href="#" class="t-card">Lihat selengkapnya!</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg">
+                <div class="col-sm-4">
                     <div class="card kartu">
                         <div class="gambar-card"><i class="fa-solid fa-boxes-stacked"></i></div>
-                        <div class="card-body">
+                        <div class="card-body d-grid justify-content-center">
                             <h5 class="j-title">Paket CCTV</h5>
                             <p class="l-text">Paket CCTV dari berbagai brand CCTV yang sesuai dengan kebutuhan anda</p>
                             <hr>
-                            <a href="#" class="t-card">Lihat selengkapnya!</a>
+                            <a class="btn btn-primary" href="#">Lihat selengkapnya!</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg">
+                <div class="col-sm-4">
+                    <div class="card kartu">
+                        <div class="gambar-card"><i class="fa-solid fa-calendar-days"></i></div>
+                        <div class="card-body d-grid justify-content-center">
+                            <h5 class="j-title">Jadwal Pemasagan</h5>
+                            <p class="l-text">Tentukan waktu pemasangan CCTV sesuai dengan keinginan anda</p>
+                            <hr>
+                            <a class="btn btn-primary" href="#">Lihat selengkapnya!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
                     <div class="card kartu">
                         <div class="gambar-card"><i class="fa-solid fa-credit-card"></i></div>
-                        <div class="card-body">
+                        <div class="card-body d-grid justify-content-center">
                             <h5 class="j-title">Proses Pembayaran</h5>
                             <p class="l-text">Pembayaran dapat diselesaikan setelah proses Instalasi CCTV selesai</p>
                             <hr>
-                            <a href="#" class="t-card">Lihat selengkapnya!</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg">
-                    <div class="card kartu">
-                        <div class="gambar-card"><i class="fa-solid fa-person-circle-check"></i></div>
-                        <div class="card-body">
-                            <h5 class="j-title">Jadi Distributor</h5>
-                            <p class="l-text">Daftar segera untuk menjadi Distributor CCTV & IP Camera</p>
-                            <hr>
-                            <a href="#" class="t-card">Lihat selengkapnya!</a>
+                            <a class="btn btn-primary" href="#">Lihat selengkapnya!</a>
                         </div>
                     </div>
                 </div>

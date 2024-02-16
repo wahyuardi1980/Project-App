@@ -93,12 +93,13 @@ body {
     .icons a {
         box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
         transition: 0.5s ease;
-        margin: 10px 0;
+        /* margin: 10px 0; */
         background-color: white;
         width: 60px;
         height: 60px;
         position: relative;
         display: block;
+        margin: auto;
         font-size: 30px;
         line-height: 60px;
         border-radius: 50%;
@@ -474,12 +475,13 @@ body {
     .gambar-card i {
         box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
         transition: 0.5s ease;
-        margin: 0 120px;
+        /* margin: 0 120px; */
         background-color: #0f172a;
         width: 60px;
         height: 60px;
-        position: relative;
-        display: block;
+        margin: auto;
+        /* position: relative; */
+        /* display: block; */
         font-size: 30px;
         line-height: 60px;
         border-radius: 50%;
@@ -497,11 +499,13 @@ body {
         margin-top: 15px;
         color: #64748b;
     }
-    .t-card {
-        margin: 0 60px;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 500;
+
+    .card-body a {
+        border-radius: 18px;
+    }
+
+    .card-body a:hover {
+        opacity: 0.9;
     }
 
     .jumbotron,
@@ -538,6 +542,7 @@ body {
         margin-top: -10px;
         background-color: #ffffff;
     }
+
     .kartu {
         margin-top: -50%;
         margin-bottom: 100px;
