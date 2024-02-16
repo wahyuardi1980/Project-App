@@ -275,7 +275,18 @@
             </div>
 
             <div class="row list-product-card">
-                <div class="col-md-4 mb-3">
+                @foreach ($data as $item)                   
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="{{ asset($item->foto_produk) }}" alt="Foto">
+                            <div class="card-body">
+                                <p class="card-text">{{ $item->description }}</p>
+                                <button class="btn btn-primary tombol">Lihat</button>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                {{-- <div class="col-md-4 mb-3">
                     <div class="card">
                         <img src="img/brand-populer/p1.jpg" class="card-img-top" alt="foto 1">
                         <div class="card-body">
@@ -292,16 +303,7 @@
                             <button class="btn btn-primary tombol">Lihat</button>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card">
-                        <img src="img/brand-populer/p1.jpg" class="card-img-top" alt="foto 1">
-                        <div class="card-body">
-                            <p class="card-text">4 Camera 2 Megapixels</p>
-                            <button class="btn btn-primary tombol">Lihat</button>
-                        </div>
-                    </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>

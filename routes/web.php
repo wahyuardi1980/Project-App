@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\mainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
-Route::get('/product', function () {
-    return view('product');
-});
+// Route::get('/product', function () {
+//     return view('product');
+// });
+
+
+Route::get('/', [mainController::class, 'index'])->name('/');
