@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\mainController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\dashboard;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +20,19 @@ use Illuminate\Support\Facades\Route;
 //     return view('home');
 // });
 
-// Route::get('/product', function () {
-//     return view('product');
-// });
 
-
+// halaman utama saat diakses route
 Route::get('/', [mainController::class, 'index'])->name('/');
+
+// halaman dashboard admin only route menggunakan resource
+// Route::get('/admin/dashboard_admin', [dashboard::class, 'index'])->name('/admin/dashboard_admin');
+// Route::get('/admin/input_data', [dashboard::class, 'create'])->name('/admin/input_data');
+
+Route::resource('admin', dashboard::class)->middleware('isLogin');
+
+
+// login and logout route
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login_proses', [LoginController::class, 'login_proses'])->name('login_proses');

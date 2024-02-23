@@ -41,7 +41,7 @@
                         <a class="nav-link" href="#contact"><i class="fa-solid fa-address-book"></i> Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary tombol" href="#"><i class="fa-solid fa-user"></i> Sign In</a>
+                        <a class="btn btn-primary tombol" href="{{'/login'}}"><i class="fa-solid fa-user"></i> Sign In</a>
                     </li>
                 </ul>
             </div>
@@ -181,7 +181,7 @@
         {{-- card --}}
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-md-4 mb-3">
                     <div class="card kartu">
                         <div class="gambar-card"><i class="fa-solid fa-boxes-stacked"></i></div>
                         <div class="card-body d-grid justify-content-center">
@@ -192,7 +192,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-md-4 mb-3">
                     <div class="card kartu">
                         <div class="gambar-card"><i class="fa-solid fa-calendar-days"></i></div>
                         <div class="card-body d-grid justify-content-center">
@@ -203,7 +203,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-md-4 mb-3">
                     <div class="card kartu">
                         <div class="gambar-card"><i class="fa-solid fa-credit-card"></i></div>
                         <div class="card-body d-grid justify-content-center">

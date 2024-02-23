@@ -378,6 +378,59 @@ body {
         margin-top: 40px;
         margin-bottom: 25px;
     }
+
+    /* login pages css */
+    #login-pages {
+        background-color: #0f172a;
+        /* padding: 20%; */
+        padding-bottom: 50%;
+    }
+
+    #login-pages img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10%;
+        margin-top: 30px;
+    }
+
+    .logo_big {
+        text-align: center;
+    }
+
+    .bungkus-login {
+        background-color: #0f172a;
+        box-shadow: 3px 5px 14px rgba(0, 0, 0, 0.5);
+        padding: 50px;
+        border-radius: 20px;
+    }
+
+    .bungkus-login input {
+        padding: 10px;
+    }
+
+    .bungkus-login .form-select {
+        padding: 10px;
+    }
+
+    .bungkus-login p {
+        color: red;
+        text-align: center;
+        font-family: "Poppins";
+        font-size: 18px;
+    }
+
+    /* #table dashboard admin */
+    #table-data {
+        background-color: #0f172a;
+        padding-bottom: 50%;
+    }
+
+    #table-data img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10%;
+        margin-top: 30px;
+    }
 }
 
 /* Dekstop Version */
@@ -502,9 +555,11 @@ body {
 
     .card-body a {
         border-radius: 18px;
+        transition: 0.5s ease;
     }
 
     .card-body a:hover {
+        transition: 0.3 ease-in-out;
         opacity: 0.9;
     }
 
@@ -796,5 +851,46 @@ body {
 
     .to-top:hover {
         opacity: 0.7 !important;
+    }
+
+    /* login pages css */
+    #login-pages {
+        background-color: #0f172a;
+        /* padding: 20%; */
+        padding-bottom: 30px;
+    }
+
+    .logo_big {
+        text-align: center;
+        /* margin-top: 10px;*/
+        margin-bottom: 20px;
+    }
+
+    .bungkus-login {
+        background-color: #0f172a;
+        box-shadow: 3px 5px 14px rgba(0, 0, 0, 0.5);
+        padding: 50px;
+        border-radius: 20px;
+    }
+
+    .bungkus-login input {
+        padding: 10px;
+    }
+
+    .bungkus-login .form-select {
+        padding: 10px;
+    }
+
+    .bungkus-login p {
+        color: red;
+        text-align: center;
+        font-family: "Poppins";
+        font-size: 18px;
+    }
+
+    /* #table dashboard admin */
+    #table-data {
+        background-color: #0f172a;
+        padding-bottom: 20%;
     }
 }
