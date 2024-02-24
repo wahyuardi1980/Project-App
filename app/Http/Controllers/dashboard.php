@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\mainModel;
 use Illuminate\Http\Request;
 
 class dashboard extends Controller
@@ -12,7 +13,8 @@ class dashboard extends Controller
     public function index()
     {
         //
-        return view('admin.dashboard_admin');
+        $datadog = mainModel::all();
+        return view('admin.index', ['datadog'=>$datadog]); 
     }
 
     /**
@@ -29,7 +31,25 @@ class dashboard extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama_barang' => 'required',
+            'kategori' => 'required',
+            'harga' => 'required',
+            'description' => 'required',
+            'foto_barang' => 'required',
+        ]);
+
+        $datadog = [
+            'nama_barang' =>$request->nama_barang,
+            'kategori' =>$request->kategori,
+            'harga' =>$request->harga,
+            'description' =>$request->description,
+            'foto_barang' =>$request->foto_barang
+        ];
+
+        mainModel::create($datadog);
+        return redirect('/admin')->with('success_added', 'Data Berhasil Ditambah!');
+        // return($request);
     }
 
     /**

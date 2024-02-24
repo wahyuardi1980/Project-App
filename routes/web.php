@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // halaman utama saat diakses route
-Route::get('/', [mainController::class, 'index'])->name('/');
+Route::get('/', [mainController::class, 'home'])->name('/');
 
 // halaman dashboard admin only route menggunakan resource
 // Route::get('/admin/dashboard_admin', [dashboard::class, 'index'])->name('/admin/dashboard_admin');

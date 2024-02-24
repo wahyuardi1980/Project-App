@@ -44,8 +44,9 @@
                         {{ Session::get('failed')}}
                     </div>
                 @endif --}}
-                <form class="justify-content-center" action="{{ route('login_proses') }}" method="POST">
+                <form class="justify-content-center" action="{{ url('admin') }}" method="POST">
                     @csrf
+                    {{-- @method('PUT') --}}
                     <div class="row mb-3">
                         <div class="col-lg">
                             <label class="form-label">Nama Barang</label>
@@ -70,14 +71,14 @@
                         </div>
                         <div class="col-lg">
                             <label class="form-label">Deskripsi Barang</label>
-                            <input type="text" name="harga" class="form-control"
+                            <input type="text" name="description" class="form-control"
                                 placeholder="Masukkan Deskripsi Barang">
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-lg">
                             <label class="form-label">Foto Barang</label>
-                            <input type="file" name="harga" class="form-control">
+                            <input type="file" name="foto_barang" class="form-control">
                         </div>
                     </div>
                     <div class="d-grid gap-2 button-rwt pt-4 mt-2">

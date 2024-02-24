@@ -48,6 +48,12 @@
                 @endif
 
             <div class="table-responsive">
+
+                @if (Session::has('success_added'))
+                    <div class="alert alert-success role="alert">
+                        {{ Session::get('success_added')}}
+                    </div>
+                @endif
                 <table class="table table-dark table-bordered table-striped mt-5">
                     <thead>
                         <tr>
@@ -61,36 +67,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Camera 12 Megapixels</td>
-                            <td>CCTV</td>
-                            <td>Rp. 2.500.000</td>
-                            <td>Dapat Berputar 360 derajat</td>
-                            <td>img/src/fth.png</td>
-                            <td class="text-center"><a class="btn btn-warning" href="#">Edit</a></td>
-                            <td class="text-center"><a class="btn btn-danger" href="#">Delete</a></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Camera 12 Megapixels</td>
-                            <td>CCTV</td>
-                            <td>Rp. 2.500.000</td>
-                            <td>Dapat Berputar 360 derajat</td>
-                            <td>img/src/fth.png</td>
-                            <td class="text-center"><a class="btn btn-warning" href="#">Edit</a></td>
-                            <td class="text-center"><a class="btn btn-danger" href="#">Delete</a></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Camera 12 Megapixels</td>
-                            <td>CCTV</td>
-                            <td>Rp. 2.500.000</td>
-                            <td>Dapat Berputar 360 derajat</td>
-                            <td>img/src/fth.png</td>
-                            <td class="text-center"><a class="btn btn-warning" href="#">Edit</a></td>
-                            <td class="text-center"><a class="btn btn-danger" href="#">Delete</a></td>
-                        </tr>
+                        @foreach ($datadog as $k)
+                            <tr>
+                                <td>1</td>
+                                <td>{{ $k['nama_barang'] }}</td>
+                                <td>{{ $k['kategori'] }}</td>
+                                <td>{{ Str::rupiah($k['harga']) }}</td>
+                                <td>{{ $k['description'] }}</td>
+                                <td>{{ $k['foto_barang'] }}</td>
+                                <td class="text-center"><a class="btn btn-warning" href="#">Edit</a></td>
+                                <td class="text-center"><a class="btn btn-danger" href="#">Delete</a></td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

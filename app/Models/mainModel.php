@@ -9,6 +9,6 @@ class mainModel extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['foto_produk', 'description'];
     protected $table = 'main_model';
+    protected $fillable = ['nama_barang', 'kategori', 'harga', 'description', 'foto_barang'];
 }

@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Hash;
 class mainController extends Controller
 {
     //menampilkan data yg ada didalam DB cctvlab_laravel
-    public function index()
+    public function home()
         {
             $data = mainModel::all();
-            return view('home', ['data'=>$data]); 
+            return view('home', ['data'=>$data]);
         }
 }

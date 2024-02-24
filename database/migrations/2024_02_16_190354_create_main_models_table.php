@@ -13,8 +13,11 @@ return new class extends Migration
     {
         Schema::create('main_model', function (Blueprint $table) {
             $table->id();
-            $table->string('foto_produk');
+            $table->string('nama_barang')->nullable();
+            $table->enum('kategori', ['CCTV', 'ALARM', 'ACCESS_CONTROL', 'FINGER_PRINT', 'PABX', 'VIDEO_WALL']);
+            $table->integer('harga');
             $table->text('description')->nullable();
+            $table->string('foto_barang');
             $table->timestamps();          
         });
     }
