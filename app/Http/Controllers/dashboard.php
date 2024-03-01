@@ -87,7 +87,8 @@ class dashboard extends Controller
      */
     public function show(string $id)
     {
-        //
+        // $showData = mainModel::findOrFail($id);
+        // return view('produk.show', compact('showData'));
     }
 
     /**

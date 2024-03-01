@@ -23,6 +23,9 @@ use Illuminate\Support\Facades\Route;
 
 // halaman utama saat diakses route
 Route::get('/', [mainController::class, 'home'])->name('/');
+Route::get('/product', [mainController::class, 'product'])->name('/product');
+Route::get('/produk/{id}', [mainController::class, 'show'])->name('produk.show');
+Route::get('/produk', [mainController::class, 'search'])->name('produk.search');
 
 // halaman dashboard admin only route menggunakan resource
 // Route::get('/admin/dashboard_admin', [dashboard::class, 'index'])->name('/admin/dashboard_admin');

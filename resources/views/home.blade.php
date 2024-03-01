@@ -57,15 +57,15 @@
     {{-- display in mobile only  --}}
     {{-- mobile displau only iamge slide and merk slide image --}}
 
-    <section id="cari">
+    {{-- <section id="cari">
         <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
-    </section>
+    </section> --}}
 
     <section id="hit-box">
-        <div class="container">
+        <div class="container text-center mb-3">
             <div class="icons">
                 <a href="#"> <span>Jadwal Pemasangan</span><i class="fa-solid fa-calendar-days""></i></a>
             </div>
@@ -136,25 +136,20 @@
             <h1>Product</h1>
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/brand-populer/p1.jpg" class="card-img-top" alt="foto 1">
-                        <div class="card-body">
-                            <p class="card-text">4 Camera 2 Megapixels</p>
-                            <button class="btn btn-primary tombol">Lihat</button>
+                    @foreach ($datadog as $item)                   
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <img src="{{ asset('storage/uploads_image/'.$item->foto_barang) }}" alt="all foto yang diinput">
+                                <div class="card-body">
+                                    <p class="card-text">{{ $item->nama_barang }}</p>
+                                    <a href="{{ route('produk.show', $item->id) }}" class="btn btn-primary tombol">Lihat</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/brand-populer/p1.jpg" class="card-img-top" alt="foto 1">
-                        <div class="card-body">
-                            <p class="card-text">4 Camera 2 Megapixels</p>
-                            <button class="btn btn-primary tombol">Lihat</button>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
-            <button class="btn btn-primary tombol"><i class="fa-solid fa-list"></i> All Category</button>
+            <a class="btn btn-primary tombol" href="/product"><i class="fa-solid fa-list"></i> All Category</a>
         </div>
     </section>
 
@@ -166,7 +161,7 @@
                     <div class="col-lg">
                         <h4><span>Hello,</span> Selamat Datang...</h4>
                         <h1>Temukan sistem keamanan <br> terbaik menggunakan cctv</h1>
-                        <button class="btn btn-primary tombol">Lihat Product</button>
+                        <a class="btn btn-primary tombol" href="/product">Lihat Product</a>
                     </div>
                     <div class="col-lg">
                         <img src="img/kamera.png" alt="vector 3d kamera" class="img-fluid img">
@@ -275,12 +270,12 @@
             </div>
 
             <div class="row list-product-card">
-                @foreach ($data as $item)                   
+                @foreach ($datadog as $item)                   
                     <div class="col-md-4 mb-3">
                         <div class="card">
-                            <img src="{{ asset($item->foto_produk) }}" alt="Foto">
+                            <img src="{{ asset('storage/uploads_image/'.$item->foto_barang) }}" alt="all foto yang diinput">
                             <div class="card-body">
-                                <p class="card-text">{{ $item->description }}</p>
+                                <p class="card-text">{{ $item->nama_barang }}</p>
                                 <button class="btn btn-primary tombol">Lihat</button>
                             </div>
                         </div>
@@ -386,10 +381,9 @@
             <div class="row">
                 <div class="col text-center">
                     <h3 class="j-contact">Contact</h3>
-                    <h1 class="j-hub">Hubungi Saya</h1>
+                    <h1 class="j-hub">Hubungi Kami</h1>
                     <p class="label-contact">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Blanditiis, sed.
+                        Jika ingin menghubungi langsung silahkan klik link ini <a href="https://api.whatsapp.com/send?phone=6282163784377" target="_blank" class="text-white text-decoration-none">Whattsapp.com</a>
                     </p>
                 </div>
             </div>

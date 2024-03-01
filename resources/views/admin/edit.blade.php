@@ -15,7 +15,7 @@
     {{-- navbar --}}
     <nav class="navbar navbar-expand-lg navbar-dark fixed">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}"><img src="../img/logo-icon/cctv_b2b.png" alt=""
+            <a class="navbar-brand" href="{{ url('/') }}"><img src="../../img/logo-icon/cctv_b2b.png" alt=""
                     width="45" height="45" class="d-inline-block align-text-top"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
