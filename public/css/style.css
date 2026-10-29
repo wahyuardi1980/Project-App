@@ -397,6 +397,17 @@ body {
         text-align: center;
     }
 
+    .logo_big_feedback {
+        text-align: center;
+    }
+
+    .logo_big_feedback img {
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+    }
+
     .bungkus-login {
         background-color: #0f172a;
         box-shadow: 3px 5px 14px rgba(0, 0, 0, 0.5);
@@ -615,12 +626,13 @@ body {
     .j-title {
         text-align: center;
         font-family: "Poppins";
-        font-size: 24px;
-        font-weight: 700;
+        font-size: 1rem;
+        font-weight: bold;
     }
     .l-text {
         text-align: center;
-        margin-top: 15px;
+        font-size: 0.9rem;
+        /* margin-top: 15px; */
         color: #64748b;
     }
 
@@ -671,8 +683,8 @@ body {
 
     .kartu {
         margin-top: -50%;
-        margin-bottom: 100px;
         border-radius: 12px;
+        /* height: 350px; */
         box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
         transition: 0.5s ease;
     }
@@ -710,6 +722,11 @@ body {
         text-align: right;
     }
 
+    .list-product-card .card .card-text {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
     /* keunggulan kami */
     #keunggulan-kami {
         background-color: #ffffff;
@@ -737,6 +754,7 @@ body {
         margin-bottom: 35px;
         box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
         transition: 0.5s ease;
+        min-height: 25vh;
     }
 
     .keunggulan-kartu .card-title {
@@ -747,8 +765,8 @@ body {
     }
 
     .keunggulan-kartu .card-text {
-        margin-top: 20px;
-        font-size: 14px;
+        /* margin-top: 10px; */
+        font-size: 16px;
         font-weight: 400;
         font-family: "Poppins";
     }
@@ -756,7 +774,7 @@ body {
     .gambar-keunggulan i {
         color: #0a58ca;
         padding: 15% 0;
-        margin-left: 50px;
+        margin-left: 110px;
         font-size: 100px;
     }
     .keunggulan-kartu:hover {
@@ -934,6 +952,10 @@ body {
     .logo_big {
         text-align: center;
         margin-bottom: 20px;
+    }
+
+    .logo_big_feedback {
+        text-align: center;
     }
 
     .bungkus-login {
@@ -1118,12 +1140,12 @@ body {
     .j-title {
         text-align: center;
         font-family: "Poppins";
-        font-size: 24px;
-        font-weight: 700;
+        font-size: 1.5rem;
+        font-weight: bold;
     }
     .l-text {
         text-align: center;
-        margin-top: 15px;
+        margin-top: 2rem;
         color: #64748b;
     }
 
@@ -1189,6 +1211,18 @@ body {
         background-color: #ffffff;
         margin-top: -20px;
         padding-top: 5%;
+    }
+
+    #list-product-sec a {
+        display: table;
+        width: fit-content;
+        margin: 20px auto;
+        padding: 10px 15px;
+        height: auto;
+        line-height: 1.5;
+        overflow: visible;
+        box-sizing: border-box;
+        font-family: "Poppins";
     }
 
     .intro-display {
@@ -1266,6 +1300,16 @@ body {
         box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.7);
         /* transform: translate(0, -25px); */
     }
+
+    .list-product-card .card {
+        max-height: 600px;
+    }
+
+    .list-product-card .card .card-text {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
     #contact {
         padding-bottom: 5%;
         background-image: linear-gradient(

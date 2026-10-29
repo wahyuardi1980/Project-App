@@ -25,14 +25,14 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#jumbotron"><i class="fa-solid fa-house"></i> Beranda</a>
+                        <a class="nav-link" href="{{ route('/') }}"><i class="fa-solid fa-house"></i> Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#list-product-sec"><i class="fa-solid fa-box-open"></i>
+                        <a class="nav-link" href="{{ route('/product') }}"><i class="fa-solid fa-box-open"></i>
                             Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact"><i class="fa-solid fa-address-book"></i> Contact Us</a>
+                        <a class="nav-link" href="https://api.whatsapp.com/send?phone=6282163784377"><i class="fa-solid fa-address-book"></i> Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-primary tombol" href="{{ '/login' }}"><i class="fa-solid fa-user"></i>

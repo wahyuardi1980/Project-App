@@ -176,7 +176,7 @@
         {{-- card --}}
         <div class="container">
             <div class="row">
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4">
                     <div class="card kartu">
                         <div class="gambar-card"><i class="fa-solid fa-boxes-stacked"></i></div>
                         <div class="card-body d-grid justify-content-center">
@@ -187,7 +187,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4">
                     <div class="card kartu">
                         <div class="gambar-card"><i class="fa-solid fa-calendar-days"></i></div>
                         <div class="card-body d-grid justify-content-center">
@@ -198,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4">
                     <div class="card kartu">
                         <div class="gambar-card"><i class="fa-solid fa-credit-card"></i></div>
                         <div class="card-body d-grid justify-content-center">
@@ -249,7 +249,7 @@
             <div class="list-product">
                 <div class="row">
                     <div class="col-lg">
-                        <h1>Product <span>Popular</span></h1>
+                        <h1>Product <span>Terbaru</span></h1>
                     </div>
                     <div class="col-lg">
                         {{-- <button class="btn btn-primary tombol"><i class="fa-solid fa-list"></i> All Category</button> --}}
@@ -270,13 +270,16 @@
             </div>
 
             <div class="row list-product-card">
+
+
+                
                 @foreach ($datadog as $item)                   
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-4">
                         <div class="card">
                             <img src="{{ asset('storage/uploads_image/'.$item->foto_barang) }}" alt="all foto yang diinput">
                             <div class="card-body">
                                 <p class="card-text">{{ $item->nama_barang }}</p>
-                                <button class="btn btn-primary tombol">Lihat</button>
+                                <a href="{{ route('produk.show', $item->id) }}" class="btn btn-primary tombol">Lihat</a>
                             </div>
                         </div>
                     </div>
@@ -300,6 +303,7 @@
                     </div>
                 </div> --}}
             </div>
+            <a class="btn btn-primary mt-5" href=" {{ route('/product') }} ">Liha Product Lainnya</a>
         </div>
     </section>
 
@@ -389,39 +393,47 @@
             </div>
             <div class="row justify-content-center mb-3">
                 <div class="col-md-6">
-                    <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-                        <strong>Thank You!</strong> Pesan anda sudah kami terima.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"
-                            aria-label="Close"></button>
-                    </div>
-                    <form name="contact-form">
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissible fade show my-alert" role="alert">
+                            <strong>Thank You!</strong> Pesan anda sudah kami terima.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close"></button>
+                        </div>
+                    @endif
+                    @if ($errors->any())
+                        <div class="alert alert-danger alert-dismissible fade show my-alert" role="alert">
+                            <strong>Silahkan Isi</strong> Pesan yang lengkap.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close"></button>
+                        </div>
+                    @endif
+                    <form action="{{ route('pesan') }}" method="POST">
+                        @csrf
                         <div class="mb-3">
                             <label for="name" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="name"
-                                name="nama" />
+                            <input type="text" class="form-control" name="nama_pengirim" />
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="email"
-                                name="email" />
+                            <input type="email" class="form-control" name="email" />
                         </div>
                         <div class="mb-3">
                             <label for="pesan" class="form-label">Pesan</label>
-                            <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+                            <textarea class="form-control" rows="3" name="pesan"></textarea>
                         </div>
 
                         <div class="col-lg">
                             <div class="d-grid gap-2">
-                                <button type="button" class="btn btn-success btn-rwt">
+                                <button type="submit" class="btn btn-success btn-rwt">
                                     Kirim
                                 </button>
                             </div>
                         </div>
 
-                        <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                        {{-- <button class="btn btn-primary btn-loading d-none" type="button" disabled>
                             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                             Loading...
-                        </button>
+                        </button> --}}
                     </form>
                 </div>
             </div>

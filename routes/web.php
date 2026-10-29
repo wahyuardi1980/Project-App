@@ -23,10 +23,13 @@ use Illuminate\Support\Facades\Route;
 
 // halaman utama saat diakses route
 Route::get('/', [mainController::class, 'home'])->name('/');
+Route::post('/pesan', [mainController::class, 'pesan'])->name('pesan');
 Route::get('/product', [mainController::class, 'product'])->name('/product');
 Route::get('/produk/{id}', [mainController::class, 'show'])->name('produk.show');
 Route::get('/produk', [mainController::class, 'search'])->name('produk.search');
-
+Route::get('/admin/feedback', [mainController::class, 'feedback'])->name('admin/feedback');
+Route::delete('/admin/feedback/hapusmsg/{id}', [mainController::class, 'hapusmsg'])->name('admin.feedback.hapusmsg');
+// Route::delete('/admin/feedback/{id}', 'mainController@hapusmsg')->name('admin.feedback.hapusmsg');
 // halaman dashboard admin only route menggunakan resource
 // Route::get('/admin/dashboard_admin', [dashboard::class, 'index'])->name('/admin/dashboard_admin');
 // Route::get('/admin/input_data', [dashboard::class, 'create'])->name('/admin/input_data');

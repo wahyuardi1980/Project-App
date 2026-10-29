@@ -30,6 +30,7 @@
               <p><span>Harga :</span> {{ Str::rupiah($datadog['harga']) }}</p>
               <p><span>Deskripsi :</span> {{ $datadog->description }}</p>
               <a href="https://api.whatsapp.com/send?phone=6282163784377" target="_blank" class="btn btn-lg"><i class="bi bi-telephone-fill"></i> <br>Hubungi Kami</a>
+              <a href="/" class="btn btn-lg"><i class="bi bi-arrow-counterclockwise"></i><br>Kembali</a>
             </div>
           </div>
         </div>
