@@ -14,14 +14,50 @@ class mainController extends Controller
     public function home()
         {
             $datadog = mainModel::latest()->take(3)->get();
-            return view('home', ['datadog'=>$datadog]);
+            $categories = [
+                'CCTV',
+                'ALARM',
+                'ACCESS_CONTROL',
+                'FINGER_PRINT',
+                'PABX',
+                'VIDEO_WALL'
+            ];
+
+            return view('home', [
+                'datadog' => $datadog,
+                'categories' => $categories
+            ]);
         }
 
-    public function product()
+
+    public function product(Request $request)
         {
-            $datadog = mainModel::all();
-            return view('produk.product', ['datadog'=>$datadog]);
+            // Mengambil kategori unik dari database
+            $categories = [
+                'CCTV',
+                'ALARM',
+                'ACCESS_CONTROL',
+                'FINGER_PRINT',
+                'PABX',
+                'VIDEO_WALL'
+            ];
+
+            // Mengambil data produk
+            $query = mainModel::query();
+
+            // Filter berdasarkan kategori yang dipilih
+            if ($request->filled('kategori')) {
+                $query->where('kategori', $request->kategori);
+            }
+
+            $datadog = $query->latest()->get();
+
+            return view('produk.product', [
+                'datadog' => $datadog,
+                'categories' => $categories
+            ]);
         }
+
 
     public function show(string $id)
         {

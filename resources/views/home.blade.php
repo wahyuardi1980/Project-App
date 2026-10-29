@@ -254,15 +254,30 @@
                     <div class="col-lg">
                         {{-- <button class="btn btn-primary tombol"><i class="fa-solid fa-list"></i> All Category</button> --}}
                         <div class="dropdown">
-                            <a class="btn btn-primary tombol dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="btn btn-primary tombol dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
                                 <i class="fa-solid fa-list"></i> All Category
                             </a>
 
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ url('/product') }}">
+                                        Semua Kategori
+                                    </a>
+                                </li>
+
+                                @foreach ($categories as $category)
+                                    <li>
+                                        <a class="dropdown-item"
+                                        href="{{ url('/product') }}?kategori={{ urlencode($category) }}">
+                                            {{ str_replace('_', ' ', $category) }}
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -303,7 +318,7 @@
                     </div>
                 </div> --}}
             </div>
-            <a class="btn btn-primary mt-5" href=" {{ route('/product') }} ">Liha Product Lainnya</a>
+            <a class="btn btn-primary mt-5 more-button" href=" {{ route('/product') }} ">Liha Product Lainnya</a>
         </div>
     </section>
 

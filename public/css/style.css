@@ -1213,7 +1213,7 @@ body {
         padding-top: 5%;
     }
 
-    #list-product-sec a {
+    #list-product-sec .more-button {
         display: table;
         width: fit-content;
         margin: 20px auto;
